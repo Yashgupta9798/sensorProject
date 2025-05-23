@@ -1,4 +1,4 @@
 pandas
 numpy
 
--e.
+-e.  # it will help automatically run the setup.py file when we write pip install -r requirements.txt
