@@ -6,7 +6,7 @@ import os
 import pandas as pd
 import pickle
 import yaml
-# import boto3
+import boto3
 
 
 from src.constant import *
