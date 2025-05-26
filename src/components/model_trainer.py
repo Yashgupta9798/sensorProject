@@ -1,3 +1,11 @@
+# This file includes 2 classes
+# 1) ModelTrainerConfig class -->contains all the path- --> artifact folder, trained_model_path, expected_accuracy, model_config_file_path(parameter for hyhper parameter tuning)
+# 2) ModelTrainer class --> responsible for training, evaluating and fineTuning --> have 4 methods
+# Method-1 --> evaluate_models() Method --> split into traning and testing set, train the model and predict, and store the test accuracy
+# Method-2 --> get_best_model() Method --> finds the best model on accuracy score from prev method output --> call 1st method and return the best model's name, socre and model object
+# Method-3 --> finetune_best_model() Method --> fine tune the best model using GridSearchCV to search for the best hyper parameter --> reads model's hyerparameter grid from yaml file using method wrote in utils file, perform grid search to find the best hyper parms, update it and then return the fine tuned model
+# Method-4 --> initiate_model_trainer() Method --> helps in running all the 3 methods --> first split the input into X and y from train_array and test_array since we have created in data_transformatin component, call 1st method, call 2nd method, call 3rd mehtod, train the finetuned model in training set and test set, if model meets the accuracy threshold then save it in .pkl file
+
 
 
 import sys
